@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Undangan Pernikahan Dini & Riston</title>
+<title>Kepada Yth: Bapak/Ibu/Saudara/i</title>
+<title>Yang Berada di Tempat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    font-family:'Poppins', sans-serif;
+}
+
+/* Format Halaman 9:16 */
+.section{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:40px 22px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s ease;
+}
+
+.section.active{
+    opacity:1;
+    transform:translateY(0);
+    z-index:1;
+}
+
+/* BACKGROUND FOTO KARTUN PENGANTIN */
+.bg{
+    position:absolute;
+    inset:0;
+    background-image:url("sandbox:/mnt/data/ChatGPT Image 24 Nov 2025, 11.07.39.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    opacity:0.35;
+    z-index:-1;
+}
+
+/* Dekorasi floral */
+.decor-top{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:170px;
+    background:url('https://i.ibb.co/Y3g7sGv/floral-elegant-top.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:top center;
+    opacity:0.55;
+}
+
+/* Judul */
+.title{
+    font-family:'Playfair Display', serif;
+    font-size:46px;
+    margin-bottom:10px;
+    color:#4A3E3E;
+}
+
+/* Sub Judul */
+.subtitle{
+    font-size:20px;
+    opacity:0.85;
+    margin-bottom:25px;
+    color:#5b4c46;
+}
+
+/* Paragraf */
+p{
+    max-width:82%;
+    font-size:19px;
+    line-height:1.6;
+    margin-bottom:18px;
+    color:#463a34;
+}
+
+/* Tombol */
+.btn{
+    background:#d7b8a6;
+    color:white;
+    padding:14px 32px;
+    border:none;
+    border-radius:32px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.18);
+    transition:0.3s;
+}
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Countdown */
+#countdown{
+    font-size:28px;
+    font-weight:600;
+    color:#b58d7f;
+    margin-top:25px;
+}
+
+/* Musik */
+audio{display:none;}
+</style>
+</head>
+
+<body>
+
+<!-- Musik Romantis -->
+<audio id="bgm" loop>
+<source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+</audio>
+
+<!-- ====================== HALAMAN 1 ====================== -->
+<section class="section active" id="p1">
+<div class="bg"></div>
+<div class="decor-top"></div>
+
+<h3 class="subtitle">Undangan Pernikahan</h3>
+<h1 class="title">Dini & Riston</h1>
+
+<p>Kepada Yth. Bapak/Ibu/Saudara/i<br>Dengan penuh sukacita kami mengundang kehadiran Anda.</p>
+
+<button class="btn" onclick="next(); playMusic();">Buka Undangan</button>
+</section>
+
+<!-- ====================== HALAMAN 2 ====================== -->
+<section class="section" id="p2">
+<div class="bg"></div>
+<div class="decor-top"></div>
+
+<h1 class="title">Assalamu’alaikum</h1>
+<p>Dengan memohon rahmat Allah SWT, kami mengundang Anda untuk menghadiri hari bahagia kami.</p>
+
+<button class="btn" onclick="next()">Lanjut</button>
+</section>
+
+<!-- ====================== HALAMAN 3 ====================== -->
+<section class="section" id="p3">
+<div class="bg"></div>
+<div class="decor-top"></div>
+
+<h2 class="title" style="font-size:32px;">“Dan di antara tanda-tanda kekuasaan-Nya...”</h2>
+<p>…Dijadikan-Nya pasangan hidup agar kamu merasa tenteram kepadanya,
+serta dijadikan-Nya di antaramu kasih sayang.<br><b>(QS. Ar-Rum: 21)</b></p>
+
+<button class="btn" onclick="next()">Lanjut</button>
+</section>
+
+<!-- ====================== HALAMAN 4 ====================== -->
+<section class="section" id="p4">
+<div class="bg"></div>
+<div class="decor-top"></div>
+
+<h1 class="title">Mempelai</h1>
+
+<p><b>Sri Dini Batubara</b><br>
+Putri dari Bapak Emri Batubara & Ibu Resna (Almh)</p>
+
+<p><b>Riston Ali Simatupang</b><br>
+Putra dari Bapak Mustanuddin Simatupang (Alm) & Ibu Ros Aidar (Almh)</p>
+
+<p>Dengan izin Allah, kami mengikuti sunnah Rasulullah SAW menuju kehidupan sakinah mawaddah warahmah.</p>
+
+<button class="btn" onclick="next()">Lanjut</button>
+</section>
+
+<!-- ====================== HALAMAN 5 ====================== -->
+<section class="section" id="p5">
+<div class="bg"></div>
+<div class="decor-top"></div>
+
+<h1 class="title">Rangkaian Acara</h1>
+
+<p>
+<b>Akad Nikah</b><br>
+Sabtu, 06 Desember 2025<br>
+Rumah mempelai wanita
+</p>
+
+<p>
+<b>Resepsi</b><br>
+Minggu, 07 Desember 2025<br>
+Hiburan: Keyboard
+</p>
+
+<button class="btn" onclick="next()">Lanjut</button>
+</section>
+
+<!-- ====================== HALAMAN 6 ====================== -->
+<section class="section" id="p6">
+<div class="bg"></div>
+<div class="decor-top"></div>
+
+<h1 class="title">Menuju Hari Bahagia</h1>
+
+<div id="countdown">Menghitung...</div>
+
+<button class="btn" onclick="next()">Lanjut</button>
+</section>
+
+<!-- ====================== HALAMAN 7 ====================== -->
+<section class="section" id="p7">
+<div class="bg"></div>
+<div class="decor-top"></div>
+
+<h1 class="title">Lokasi Acara</h1>
+
+<iframe 
+style="width:85%; height:330px; border-radius:20px; margin-top:20px; box-shadow:0 4px 14px rgba(0,0,0,0.2);"
+src="https://www.google.com/maps?q=Desa+Pasar+Sorkam,+Sorkam+Barat&output=embed">
+</iframe>
+
+</section>
+
+<script>
+let p = 1;
+const total = 7;
+
+function next(){
+    document.getElementById("p"+p).classList.remove("active");
+    p++;
+    if(p <= total){
+        document.getElementById("p"+p).classList.add("active");
+    }
+}
+
+/* ======== FIX MUSIK AUTOPLAY HP ======== */
+const bgm = document.getElementById("bgm");
+function playMusic(){
+    bgm.play().catch(()=>{});
+}
+
+// Countdown
+const target = new Date("Dec 7, 2025 00:00:00").getTime();
+setInterval(()=>{
+    const now = new Date().getTime();
+    const sisa = target - now;
+    if(sisa < 0){
+        document.getElementById("countdown").innerHTML = "Hari ini adalah hari bahagia!";
+        return;
+    }
+    const d = Math.floor(sisa/(1000*60*60*24));
+    const h = Math.floor((sisa%(1000*60*60*24))/(1000*60*60));
+    const m = Math.floor((sisa%(1000*60*60))/(1000*60));
+    const s = Math.floor((sisa%(1000*60))/1000);
+
+    document.getElementById("countdown").innerHTML =
+    `${d} Hari : ${h} Jam : ${m} Menit : ${s} Detik`;
+},1000);
+</script>
+
+</body>
+</html>
